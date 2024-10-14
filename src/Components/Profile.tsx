@@ -24,7 +24,7 @@ export const Profile = () => {
           avatar: user.avatar
         },
         onSubmit: (values) => {
-            fetch(`http://localhost:3000/profile/:${user.id}`,{
+            fetch(`https://smart-brain-api-project.onrender.com/profile/:${user.id}`,{
                 method:'post',
                 headers: {'Content-Type': 'application/json'},
                 body:JSON.stringify({

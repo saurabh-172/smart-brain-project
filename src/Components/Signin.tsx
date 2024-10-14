@@ -21,7 +21,7 @@ export const Signin = () => {
       password: ""
     },
     onSubmit: (values) => {
-        fetch('http://localhost:3000/signin',{
+        fetch('https://smart-brain-api-project.onrender.com/signin',{
           method: 'post',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({

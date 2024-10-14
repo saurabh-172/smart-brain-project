@@ -103,10 +103,6 @@ export const App = () => {
     </Flex>
     
     {showProfile? <profileSaveContext.Provider value={{handleProfileSave, user }}><Profile /></profileSaveContext.Provider> : (isLoggedIn ? <mainPageContext.Provider value={{user, setUser}}><Facedetect /></mainPageContext.Provider> : ( showSignIn ? <SignContext.Provider value={{handleRegister, handleLoggedIn, loadUser}}><Signin /></SignContext.Provider> : <RegisterContext.Provider value={{handleSignIn ,handleLoggedIn, loadUser}}> <Register /> </RegisterContext.Provider>)) }
-    {/* add 2 components here signin and register and on home page should go show signin page.
-    once loggedin show the main component(with searchbar for face detection image with search button) 
-    there will be another porfile component when clicked on the profile photo/logo on right corner on main component it will
-    show that component.*/}
 
   </Box>
   );

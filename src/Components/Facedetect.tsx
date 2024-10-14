@@ -37,7 +37,7 @@ export const Facedetect = () => {
           url: "",
         },
         onSubmit: (values) => {
-            fetch('http://localhost:3000/imageurl',{
+            fetch('https://smart-brain-api-project.onrender.com/imageurl',{
                 method: 'post',
                 headers: { 'Content-Type': 'application/json'},
                 body: JSON.stringify({
@@ -46,7 +46,7 @@ export const Facedetect = () => {
             }).then(res => res.json())
             .then(res => {
                 if (res){
-                    fetch('http://localhost:3000/image',{
+                    fetch('https://smart-brain-api-project.onrender.com/image',{
                         method:'put',
                         headers: {'Content-Type': 'application/json'},
                         body: JSON.stringify({

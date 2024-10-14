@@ -21,7 +21,7 @@ export const Register = () => {
       password: ""
     },
     onSubmit: (values) => {
-        fetch('http://localhost:3000/register',{
+        fetch('https://smart-brain-api-project.onrender.com/register',{
             method: 'post',
             headers:{'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -79,17 +79,6 @@ export const Register = () => {
                         value={formik.values.password}
                     />
                     </FormControl>
-                    {/* <FormControl>
-                    <FormLabel htmlFor="password">Confirm Password</FormLabel>
-                    <Input
-                        id="repassword"
-                        name="repassword"
-                        type="password"
-                        variant="filled"
-                        onChange={formik.handleChange}
-                        value={formik.values.password}
-                    />
-                    </FormControl> */}
                     <Button type="submit" colorScheme="purple" width="full">
                         Register
                     </Button>
